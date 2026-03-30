@@ -21,4 +21,4 @@
 Проект деплоится как статический сайт в Vercel без сборки.
 
 ## Production URL
-Будет добавлен после деплоя.
+- https://saity-dlya-sto.vercel.app
