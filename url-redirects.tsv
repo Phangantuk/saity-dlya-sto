@@ -1,0 +1,14 @@
+﻿# URL mapping: old -> new
+/	/
+/index.php	/
+/praice.php	/praice.html
+/prais.php	/praice.html
+/o_nas.php	/o_nas.html
+/contakti.php	/contakti.html
+/contacti.php	/contakti.html
+/news.php	/news.html
+/aktciya.php	/aktciya.html
+/kondicioner.php	/uslugi/chistka-kondicionera.html
+/konditioner.php	/uslugi/chistka-kondicionera.html
+/Vacansii.php	/o_nas.html
+/stati.php	/news.html
