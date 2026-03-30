@@ -21,7 +21,7 @@
 Проект деплоится как статический сайт в Vercel без сборки.
 
 ## Production URL
-- https://saity-dlya-sto.vercel.app
+- https://stosite.site
 
 ## Ключевые доработки
 - Обновлены реальные контакты студии (телефон, email, Telegram, WhatsApp).
