@@ -1,245 +1,1187 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Автосервис STO-KRASNODARA в Краснодаре | Ремонт авто и запись заранее</title>
-  <meta name="description" content="Автосервис STO-KRASNODARA в Краснодаре: диагностика, ремонт ходовой, капремонт двигателя, КПП и АКПП, обслуживание кондиционера. Работаем по записи заранее и с выездом по Краснодару." />
-  <meta name="keywords" content="СТО Краснодар, автосервис Краснодар, ремонт ходовой, капремонт двигателя, ремонт КПП, заправка кондиционера" />
-  <link rel="canonical" href="https://sto-krasnodara.ru/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайты для СТО — студия простых сайтов для автосервисов</title>
+  <meta name="description" content="Сайты для СТО: аккуратные коммерческие сайты для небольших автосервисов и частных авто-мастеров. Понятная структура, фиксированные пакеты и прозрачные сроки.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Сайты для СТО — студия простых сайтов для автосервисов">
+  <meta property="og:description" content="Простые и аккуратные сайты для СТО, автоэлектриков и частных мастеров. Без перегруза, с понятными пакетами и сроками.">
+  <meta property="og:url" content="https://stosite.site/">
+  <meta property="og:image" content="https://stosite.site/assets/images/og-cover.svg">
+  <link rel="canonical" href="https://stosite.site/">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --bg: #f2f6f8;
+      --surface: #ffffff;
+      --surface-soft: #f7fafc;
+      --text: #1d2a33;
+      --muted: #5f6f7d;
+      --accent: #2f6c87;
+      --accent-dark: #214f65;
+      --accent-soft: #d9eaf3;
+      --line: #d8e2e9;
+      --shadow: 0 14px 30px rgba(24, 39, 49, 0.08);
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --container: min(1140px, 92%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, #ffffff 0%, #f2f6f8 42%),
+        linear-gradient(180deg, #f7fafc 0%, #f2f6f8 100%);
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(47, 108, 135, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      border-color: #bacdd9;
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(242, 246, 248, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(216, 226, 233, 0.9);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      max-width: 490px;
+    }
+
+    .brand a {
+      text-decoration: none;
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text);
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .brand p {
+      font-size: 0.82rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #32414d;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: var(--accent-dark);
+    }
+
+    .burger {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .burger::before,
+    .burger::after,
+    .burger span {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 2px;
+      background: #2d3c47;
+      transition: 0.2s ease;
+    }
+
+    .burger::before { top: 13px; }
+    .burger span { top: 50%; transform: translateY(-50%); }
+    .burger::after { bottom: 13px; }
+
+    .burger.is-open span { opacity: 0; }
+    .burger.is-open::before { top: 20px; transform: rotate(45deg); }
+    .burger.is-open::after { bottom: 20px; transform: rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid var(--line);
+      padding: 12px 0 16px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .mobile-menu nav a {
+      text-decoration: none;
+      color: #2f3f4b;
+      font-weight: 600;
+      padding: 8px 0;
+    }
+
+    /* Hero */
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .ui-mock {
+      padding: 20px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, #ffffff 0%, #f6fafc 100%);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .ui-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      color: #5f6f7d;
+      margin-bottom: 12px;
+    }
+
+    .ui-mock h3 {
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .ui-mock ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .ui-mock li {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: #fff;
+      color: #364754;
+      font-size: 0.9rem;
+    }
+
+    .ui-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .ui-row span,
+    .ui-row a {
+      border: 1px solid #cddbe4;
+      background: #f0f6f9;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      color: #2f4a5c;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .ui-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .ui-kpis div {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px 8px;
+      background: #fff;
+    }
+
+    .ui-kpis strong {
+      display: block;
+      color: #2a3a45;
+      font-size: 0.96rem;
+    }
+
+    .ui-kpis small {
+      color: #627482;
+      font-size: 0.76rem;
+    }
+
+    /* Common cards */
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--accent-dark);
+      background: #e7f1f6;
+      border: 1px solid #cee0ea;
+      font-size: 0.88rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    /* Packages */
+    .package {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .package::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      right: -40px;
+      top: -40px;
+      background: radial-gradient(circle, rgba(47,108,135,0.2) 0%, rgba(47,108,135,0) 70%);
+    }
+
+    .price {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #214f65;
+      margin-bottom: 10px;
+    }
+
+    .package ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .package li {
+      position: relative;
+      padding-left: 14px;
+      color: #3b4c58;
+      font-size: 0.93rem;
+    }
+
+    .package li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    .note {
+      margin-top: 14px;
+      border: 1px dashed #c4d7e2;
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #f7fbfd;
+      font-size: 0.9rem;
+    }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-height: 120px;
+    }
+
+    .step .n {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid #cfe0ea;
+      background: #e7f1f6;
+      color: #265d77;
+      font-size: 0.88rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: #3d4e5a;
+      line-height: 1.45;
+    }
+
+    /* Examples */
+    .example-card {
+      display: grid;
+      gap: 14px;
+    }
+
+    .example-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .example-subtitle {
+      color: #4d6070;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    .example-type {
+      border: 1px solid #c4d7e2;
+      background: #f3f8fb;
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #315567;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .example-meta {
+      font-size: 0.9rem;
+      color: #3f5260;
+      font-weight: 700;
+    }
+
+    .example-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .example-tags span {
+      border: 1px solid #d2dee7;
+      background: #f8fbfd;
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: #36505f;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 920px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .faq-q {
+      width: 100%;
+      border: 0;
+      background: #fff;
+      text-align: left;
+      padding: 16px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #263642;
+    }
+
+    .faq-q span {
+      font-size: 1.2rem;
+      color: #60707d;
+      transition: 0.2s ease;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+    }
+
+    .faq-a p {
+      padding: 0 16px 16px;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-q span {
+      transform: rotate(45deg);
+    }
+
+    /* Contacts */
+    .contacts {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f7fafc;
+      color: #304550;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 9px 10px;
+    }
+
+    .contact-links a:hover {
+      border-color: #b8ccd9;
+      background: #f1f7fa;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #435460;
+    }
+
+    .required {
+      color: #b33f3f;
+      margin-left: 4px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 6px;
+      border: 1px solid #c9d8e2;
+      border-radius: 10px;
+      padding: 12px;
+      font: inherit;
+      outline: none;
+      background: #fff;
+      color: #2c3f4c;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #90b3c7;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .contact-list li {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #f7fafc;
+      color: #40525e;
+      font-size: 0.94rem;
+    }
+
+    .contact-list a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dashed #8ca5b4;
+    }
+
+    .contact-list a:hover {
+      border-bottom-color: #587588;
+    }
+
+    .submit-msg {
+      font-size: 0.9rem;
+      color: #2b6f47;
+      min-height: 1.2em;
+    }
+
+    .form-help {
+      font-size: 0.85rem;
+      margin-top: -4px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      background: #edf3f7;
+      padding: 28px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 10px;
+      color: #465864;
+      font-size: 0.92rem;
+    }
+
+    .footer-grid strong {
+      color: #24343f;
+      font-size: 1rem;
+    }
+
+    .footer-grid a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dashed #8ca5b4;
+      width: fit-content;
+    }
+
+    .footer-grid a:hover {
+      border-bottom-color: #587588;
+    }
+
+    @media (max-width: 1060px) {
+      .steps {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 920px) {
+      .grid-2,
+      .grid-3,
+      .hero-wrap,
+      .contacts,
+      .contact-links {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .header-inner .nav,
+      .header-inner > .btn-primary {
+        display: none;
+      }
+
+      .burger {
+        display: inline-block;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero-actions .btn,
+      .mobile-menu .btn {
+        width: 100%;
+      }
+
+      .ui-kpis,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .brand p {
+        font-size: 0.78rem;
+      }
+    }
+  </style>
 </head>
-<body data-page="home">
-  <div class="topbar">
+<body>
+  <!-- Header -->
+  <header class="header">
     <div class="container">
-      <div>г. Краснодар, 1-е отделение учхоз Кубань, ул. Красная 13/1, ГСК</div>
-      <div class="topbar__phones">
-        <a href="tel:+79184100652">+7 (918) 410-06-52</a>
-        <a href="tel:+79183820195">+7 (918) 382-01-95</a>
+      <div class="header-inner">
+        <div class="brand">
+          <a href="#top">Сайты для СТО</a>
+          <p>Студия простых сайтов для автосервисов и частных авто-мастеров</p>
+        </div>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#packages">Пакеты</a>
+          <a href="#process">Как работаем</a>
+          <a href="#examples">Примеры работ</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
+
+        <button class="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+          <span></span>
+        </button>
       </div>
-    </div>
-  </div>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html" aria-label="STO-KRASNODARA главная">
-        <span class="brand__title">STO-KRASNODARA</span>
-        <span class="brand__subtitle">Автосервис в Краснодаре</span>
-      </a>
-
-      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Открыть меню">Меню</button>
-
-      <nav class="main-nav" data-main-nav>
-        <a href="index.html" data-link="home">Главная</a>
-        <a href="uslugi.html" data-link="services">Услуги</a>
-        <a href="praice.html" data-link="price">Прайс</a>
-        <a href="o_nas.html" data-link="about">О нас</a>
-        <a href="contakti.html" data-link="contacts">Контакты</a>
-        <a href="news.html" data-link="news">Новости</a>
-        <a href="aktciya.html" data-link="promo">Акции</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn btn--light" href="tel:+79184100652">Позвонить</a>
-        <a class="btn btn--accent" href="#booking">Записаться</a>
+      <div id="mobileMenu" class="mobile-menu">
+        <nav>
+          <a href="#services">Услуги</a>
+          <a href="#packages">Пакеты</a>
+          <a href="#process">Как работаем</a>
+          <a href="#examples">Примеры работ</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <article class="hero__content" data-animate>
-          <p class="hero__kicker">Работаем по записи заранее</p>
-          <h1>Современный автосервис на западном обходе Краснодара</h1>
-          <p class="lead">Сохраняем честный подход: понятный прайс, реальная диагностика, аккуратный ремонт и удобная запись без очередей. Доступен выездной формат обслуживания по Краснодару.</p>
-          <div class="hero__actions">
-            <a class="btn btn--accent" href="#booking">Записаться на обслуживание</a>
-            <a class="btn btn--light" href="tel:+79184100652">Позвонить сейчас</a>
+  <main id="top">
+    <!-- Hero -->
+    <section class="section">
+      <div class="container hero-wrap">
+        <div>
+          <div class="chip">Спокойный формат для малого бизнеса</div>
+          <h1>Сайты для СТО и частных авто-мастеров</h1>
+          <p class="lead">Делаем простые и аккуратные сайты для небольших автосервисов, автоэлектриков, диагностов и мастеров по китайским авто. Фиксированная цена, понятные сроки, без сложной разработки.</p>
+          <div class="hero-actions">
+            <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
+            <a href="#packages" class="btn btn-secondary">Посмотреть пакеты</a>
           </div>
-          <div class="chips">
-            <span class="chip">Компьютерная диагностика</span>
-            <span class="chip">Ремонт ходовой</span>
-            <span class="chip">Капремонт двигателя</span>
-            <span class="chip">Ремонт КПП и АКПП</span>
-            <span class="chip">С выездом по Краснодару</span>
-          </div>
-        </article>
+        </div>
 
-        <aside class="hero__card" data-animate>
-          <h2>Контакты для записи</h2>
-          <ul class="card-list">
-            <li>
-              <strong>Телефон:</strong><br />
-              <a href="tel:+79184100652">+7 (918) 410-06-52</a>
-            </li>
-            <li>
-              <strong>Доп. номер:</strong><br />
-              <a href="tel:+79183820195">+7 (918) 382-01-95</a>
-            </li>
-            <li>
-              <strong>Адрес:</strong><br />
-              г. Краснодар, 1-е отделение учхоз Кубань, ул. Красная 13/1, ГСК
-            </li>
-            <li>
-              <strong>Важно:</strong><br />
-              Предварительная запись обязательна.
-            </li>
+        <aside class="ui-mock" aria-label="Стилизованный макет сайта автосервиса">
+          <div class="ui-line">
+            <span>UI-макет страницы</span>
+            <span>СТО «Форсаж»</span>
+          </div>
+          <h3>Ремонт и диагностика автомобилей</h3>
+          <p>Работаем с легковыми авто, электрикой и китайскими марками.</p>
+          <ul>
+            <li>Диагностика двигателя и электрики</li>
+            <li>Ремонт подвески и тормозной системы</li>
+            <li>Плановое ТО и замена расходников</li>
           </ul>
+          <div class="ui-row">
+            <a href="#contacts">Запись онлайн</a>
+            <span>Быстрый звонок</span>
+          </div>
+          <div class="ui-kpis">
+            <div><strong>1 мин</strong><small>быстрый звонок</small></div>
+            <div><strong>5 блоков</strong><small>чёткая структура</small></div>
+            <div><strong>24/7</strong><small>контакты на виду</small></div>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="section section--tight">
-      <div class="container" data-animate>
-        <h2 class="section-title">Ключевые услуги</h2>
-        <p class="section-subtitle">Сохранили подтверждённые направления с текущего сайта и вынесли каждое в отдельную страницу.</p>
-        <div class="grid grid--services">
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Компьютерная диагностика</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Проверка систем автомобиля и первичная оценка неисправностей перед ремонтом.</p>
-            <a class="btn btn--light" href="uslugi/kompyuternaya-diagnostika.html">Подробнее</a>
+    <!-- Кому подходим -->
+    <section class="section" id="fit">
+      <div class="container">
+        <h2>Кому подойдут наши сайты</h2>
+        <p class="lead">Работаем с небольшими сервисами и частными мастерами, которым нужен понятный сайт без лишней сложности.</p>
+        <div class="grid grid-3">
+          <article class="card"><h3>Небольшие СТО</h3><p>Если нужен аккуратный сайт с услугами, контактами и записью без перегрузки.</p></article>
+          <article class="card"><h3>Частные авто-мастера</h3><p>Для тех, кому важен простой формат сайта и удобный канал заявок.</p></article>
+          <article class="card"><h3>Автоэлектрики и диагносты</h3><p>Подходит для узких направлений, где важна ясная структура услуг.</p></article>
+          <article class="card"><h3>Сервисы по китайским авто</h3><p>Помогаем отдельно и понятно показать специализацию на марках.</p></article>
+          <article class="card"><h3>Мастерские с устаревшим сайтом</h3><p>Обновляем подачу и мобильный вид без сложной переделки.</p></article>
+          <article class="card"><h3>Тем, кому нужен сайт под запись и доверие</h3><p>Делаем акцент на удобный контакт, понятные услуги и аккуратную подачу.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Что получает клиент -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Не просто сайт, а понятный рабочий инструмент</h2>
+        <div class="grid grid-3">
+          <article class="card"><div class="icon">01</div><h3>Удобный вид с телефона</h3><p>Сайт адаптирован под мобильный экран и удобно читается с первого экрана.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Быстрый звонок и запись</h3><p>Кнопки контакта расположены там, где клиенту легко принять решение.</p></article>
+          <article class="card"><div class="icon">03</div><h3>WhatsApp / Telegram / форма заявки</h3><p>Клиент выбирает удобный способ связи без лишних шагов.</p></article>
+          <article class="card"><div class="icon">04</div><h3>Услуги в понятной структуре</h3><p>Разделы выстроены так, чтобы быстро понять, что именно вы делаете.</p></article>
+          <article class="card"><div class="icon">05</div><h3>Карта, контакты, график работы</h3><p>Важная информация всегда на виду и не теряется по странице.</p></article>
+          <article class="card"><div class="icon">06</div><h3>Фото и отзывы для доверия</h3><p>Блоки доверия встроены в структуру и выглядят естественно.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Почему с нами удобно -->
+    <section class="section" id="advantages">
+      <div class="container">
+        <h2>Простой формат без перегруза</h2>
+        <div class="grid grid-2">
+          <article class="card"><h3>Фиксированная цена</h3><p>Сразу понятно, сколько стоит работа и что входит.</p></article>
+          <article class="card"><h3>Понятные сроки</h3><p>Обычно запуск за 5–10 рабочих дней.</p></article>
+          <article class="card"><h3>Без сложной разработки</h3><p>Только то, что реально нужно небольшому сервису.</p></article>
+          <article class="card"><h3>Под узкую нишу</h3><p>Сайт собирается под задачи автосервиса или частного мастера.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Пакеты -->
+    <section class="section" id="packages">
+      <div class="container">
+        <h2>Пакеты</h2>
+        <div class="grid grid-2">
+          <article class="card package">
+            <h3>Мини</h3>
+            <div class="price">20 000 ₽</div>
+            <p>Подходит для частного мастера или очень небольшого сервиса.</p>
+            <ul>
+              <li>1 страница</li>
+              <li>адаптация под телефон</li>
+              <li>блок услуг</li>
+              <li>блок «с какими авто работаем»</li>
+              <li>кнопки звонка и WhatsApp / Telegram</li>
+              <li>форма записи</li>
+              <li>карта и контакты</li>
+              <li>блок отзывов</li>
+              <li>базовое подключение метрики</li>
+              <li>1 раунд правок</li>
+            </ul>
           </article>
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Ремонт ходовой</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Передняя и задняя подвеска, диагностика ДХЧ, замены и восстановление узлов.</p>
-            <a class="btn btn--light" href="uslugi/remont-hodovoy.html">Подробнее</a>
+
+          <article class="card package">
+            <h3>Стандарт</h3>
+            <div class="price">33 000 ₽</div>
+            <p>Подходит для небольшого СТО или мастера, которому нужно больше доверия и структуры.</p>
+            <ul>
+              <li>до 5 страниц</li>
+              <li>главная страница</li>
+              <li>страница услуг</li>
+              <li>страница «о сервисе / о мастере»</li>
+              <li>страница контактов</li>
+              <li>отдельная страница по специализации или маркам авто</li>
+              <li>адаптация под телефон</li>
+              <li>формы записи</li>
+              <li>WhatsApp / Telegram / звонок</li>
+              <li>карта</li>
+              <li>отзывы</li>
+              <li>базовая SEO-структура</li>
+              <li>подключение метрики</li>
+              <li>2 раунда правок</li>
+            </ul>
           </article>
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Капремонт двигателя</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Капитальные работы по двигателю с прозрачным согласованием этапов.</p>
-            <a class="btn btn--light" href="uslugi/kapremont-dvigatelya.html">Подробнее</a>
-          </article>
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Ремонт КПП и АКПП</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Диагностика трансмиссии, снятие/установка, ремонт и замена агрегатов.</p>
-            <a class="btn btn--light" href="uslugi/remont-kpp-akpp.html">Подробнее</a>
-          </article>
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Заправка кондиционера</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Диагностика и заправка системы кондиционирования с учётом состояния контура.</p>
-            <a class="btn btn--light" href="uslugi/zapravka-kondicionera.html">Подробнее</a>
-          </article>
-          <article class="surface service-card">
-            <div class="service-card__top"><h3>Чистка инжектора и кондиционера</h3><span class="service-card__tag">Услуга</span></div>
-            <p>Отдельные страницы по чистке инжектора и чистке системы кондиционирования.</p>
-            <a class="btn btn--light" href="uslugi/chistka-inzhektora.html">Подробнее</a>
+        </div>
+        <p class="note">Дополнительные работы вроде текстов с нуля, сложных интеграций, логотипа и большого наполнения считаются отдельно.</p>
+      </div>
+    </section>
+
+    <!-- Как проходит работа -->
+    <section class="section" id="process">
+      <div class="container">
+        <h2>Как проходит работа</h2>
+        <div class="steps">
+          <article class="step"><div class="n">1</div><p>Коротко обсуждаем задачу</p></article>
+          <article class="step"><div class="n">2</div><p>Вы присылаете материалы</p></article>
+          <article class="step"><div class="n">3</div><p>Согласовываем структуру</p></article>
+          <article class="step"><div class="n">4</div><p>Собираем сайт</p></article>
+          <article class="step"><div class="n">5</div><p>Показываем на согласование</p></article>
+          <article class="step"><div class="n">6</div><p>Вносим правки</p></article>
+          <article class="step"><div class="n">7</div><p>Публикуем</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Примеры работ -->
+    <section class="section" id="examples">
+      <div class="container">
+        <h2>Примеры работ</h2>
+        <p class="lead">Показываем отдельные демонстрационные проекты. Это не действующие клиентские сайты, а честные примеры редизайна и структуры.</p>
+        <div class="grid">
+          <article class="card example-card">
+            <div class="example-head">
+              <div>
+                <h3>STO-KRASNODARA</h3>
+                <p class="example-subtitle">Концепт редизайна архивного сайта автосервиса</p>
+              </div>
+              <div class="example-type">Редизайн архивного сайта</div>
+            </div>
+            <p class="example-meta">Ниша: автосервис</p>
+            <p>Полностью пересобрали старый сайт в современном формате: сохранили услуги, прайс, структуру страниц и контакты, но обновили подачу, навигацию и мобильный UX.</p>
+            <div class="example-tags">
+              <span>новая структура</span>
+              <span>современный UI</span>
+              <span>мобильная версия</span>
+              <span>отдельные страницы услуг</span>
+              <span>прайс</span>
+              <span>контакты и запись</span>
+            </div>
+            <div>
+              <a class="btn btn-primary" href="https://demo-sto-krasnodara-modern.vercel.app" target="_blank" rel="noopener noreferrer">Открыть пример</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid grid--two" data-animate>
-        <article class="surface">
-          <h2>Как проходит запись</h2>
-          <ol class="steps">
-            <li>Вы звоните или оставляете заявку через форму.</li>
-            <li>Согласовываем удобное время и перечень работ.</li>
-            <li>Принимаем авто в сервисе или выезжаем по Краснодару.</li>
-            <li>Выполняем работы по согласованному прайсу.</li>
-          </ol>
-        </article>
-        <article class="surface">
-          <h2>Почему нам доверяют</h2>
-          <div class="kv">
-            <div><strong>Понятный прайс:</strong><span>собрали актуальные позиции из старого прайс-листа в удобный формат.</span></div>
-            <div><strong>Акцент на запись заранее:</strong><span>минимум ожидания и предсказуемая загрузка сервиса.</span></div>
-            <div><strong>Выездной формат:</strong><span>сохранили направление ремонта с выездом по Краснодару.</span></div>
-            <div><strong>Локальный сервис:</strong><span>контакты и фактический адрес остаются прежними.</span></div>
-          </div>
-        </article>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>Частые вопросы</h2>
+        <div class="faq">
+          <article class="faq-item">
+            <button class="faq-q" aria-expanded="false">Сколько длится работа?<span>+</span></button>
+            <div class="faq-a"><p>Обычно от 5 до 10 рабочих дней.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" aria-expanded="false">Что нужно для старта?<span>+</span></button>
+            <div class="faq-a"><p>Список услуг, контакты, адрес, фото, логотип и краткая информация о сервисе.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" aria-expanded="false">Можно ли обновить старый сайт?<span>+</span></button>
+            <div class="faq-a"><p>Да, если задача укладывается в формат простого сайта без сложного функционала.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" aria-expanded="false">Можно ли потом доработать?<span>+</span></button>
+            <div class="faq-a"><p>Да, небольшие улучшения можно делать отдельно после запуска.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" aria-expanded="false">Вы делаете сложные CRM и нестандартные интеграции?<span>+</span></button>
+            <div class="faq-a"><p>Нет, мы работаем с простыми сайтами без тяжелой разработки.</p></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid grid--two" data-animate>
-        <article class="cta-band">
-          <h3>Нужен ремонт с выездом?</h3>
-          <p>Раздел выездного сервиса сохранён отдельно, как и на старом сайте.</p>
-          <div class="hero__actions">
-            <a class="btn btn--accent" href="vyezdnoy-servis.html">Открыть раздел выезда</a>
-            <a class="btn btn--light" href="aktciya.html">Смотреть акции</a>
-          </div>
-        </article>
-        <article class="surface">
-          <h3>Прайс и категории работ</h3>
-          <p>На странице прайса доступны все основные категории из архивной версии: двигатель, трансмиссия, подвеска, тормозная система, электрика и другие.</p>
-          <a class="btn btn--light" href="praice.html">Перейти в прайс</a>
-        </article>
+    <!-- Блок без портфолио -->
+    <section class="section" id="focus">
+      <div class="container">
+        <h2>Запускаем узкое направление для автосервисов</h2>
+        <p class="lead">Мы делаем ставку на простой и понятный формат сайтов для небольших СТО и частных мастеров. Вместо громких обещаний — фиксированные пакеты, понятные сроки и аккуратная структура сайта под реальные задачи сервиса.</p>
+        <div class="grid grid-3">
+          <article class="card"><h3>Понятные пакеты</h3><p>Условия и объём работ заранее описаны без расплывчатых формулировок.</p></article>
+          <article class="card"><h3>Узкая специализация</h3><p>Мы работаем именно с нишей автосервисов и частных авто-мастеров.</p></article>
+          <article class="card"><h3>Быстрый запуск</h3><p>Фокус на рабочем результате в реальный срок, без лишнего усложнения.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container booking" id="booking" data-animate>
-        <h2>Форма записи</h2>
-        <p class="muted">Заполните заявку, и откроется SMS с уже готовым текстом для отправки. Если удобнее, звоните сразу.</p>
-        <form class="booking-form">
-          <div class="field">
-            <label for="name">Имя</label>
-            <input id="name" name="name" autocomplete="name" required />
+    <!-- Контакты -->
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div class="card">
+          <h2>Обсудим ваш сайт</h2>
+          <p class="lead">Оставьте заявку или свяжитесь удобным способом — подскажем, какой формат сайта подойдет именно вашему сервису.</p>
+          <div class="contact-links">
+            <a href="tel:+66831355040">Позвонить: +66 83 135 5040</a>
+            <a href="https://wa.me/66831355040" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
+            <a href="https://t.me/grishin_fedor" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+            <a href="mailto:fedorromanovich@freemeal.live">Написать на Email</a>
           </div>
-          <div class="field">
-            <label for="phone">Телефон</label>
-            <input id="phone" name="phone" autocomplete="tel" required />
-          </div>
-          <div class="field">
-            <label for="service">Что нужно сделать</label>
-            <select id="service" name="service" required>
-              <option value="">Выберите услугу</option>
-              <option>Компьютерная диагностика</option>
-              <option>Ремонт ходовой</option>
-              <option>Капремонт двигателя</option>
-              <option>Ремонт КПП и АКПП</option>
-              <option>Заправка кондиционера</option>
-              <option>Чистка инжектора</option>
-              <option>Чистка кондиционера</option>
-              <option>Нужен выездной сервис</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="car">Автомобиль</label>
-            <input id="car" name="car" placeholder="Марка / модель / год" />
-          </div>
-          <div class="field">
-            <label for="comment">Комментарий</label>
-            <textarea id="comment" name="comment" placeholder="Кратко опишите симптом или задачу"></textarea>
-          </div>
-          <div class="form-actions">
-            <button class="btn btn--accent" type="submit">Отправить заявку по SMS</button>
-            <a class="btn btn--light" href="tel:+79184100652">Позвонить</a>
-          </div>
-          <p class="form-note">Мы работаем по предварительной записи.</p>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
+          <form id="studioForm" class="form-grid" novalidate>
+            <label for="studioName">Имя<span class="required">*</span></label>
+            <input id="studioName" type="text" name="name" required minlength="2" autocomplete="name" placeholder="Ваше имя">
+            <label for="studioPhone">Телефон<span class="required">*</span></label>
+            <input id="studioPhone" type="tel" name="phone" required pattern="^\+?[0-9\s\-()]{8,}$" autocomplete="tel" placeholder="+66 83 135 5040">
+            <label for="studioTask">Кратко о задаче<span class="required">*</span></label>
+            <textarea id="studioTask" name="task" required minlength="10" placeholder="Например: сайт для небольшой мастерской, нужен запуск в ближайшее время"></textarea>
+            <p class="form-help">Форма готова к подключению API. Пока отправка идёт в WhatsApp как быстрый рабочий канал.</p>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+            <p class="submit-msg" id="studioMsg" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Контакты студии</h3>
+          <ul class="contact-list">
+            <li>Телефон: <a href="tel:+66831355040">+66 83 135 5040</a></li>
+            <li>Email: <a href="mailto:fedorromanovich@freemeal.live">fedorromanovich@freemeal.live</a></li>
+            <li>Telegram: <a href="https://t.me/grishin_fedor" target="_blank" rel="noopener noreferrer">@grishin_fedor</a></li>
+            <li>WhatsApp: <a href="https://wa.me/66831355040" target="_blank" rel="noopener noreferrer">+66 83 135 5040</a></li>
+          </ul>
+        </aside>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Главная</a>
-        <a href="uslugi.html">Услуги</a>
-        <a href="praice.html">Прайс</a>
-        <a href="o_nas.html">О нас</a>
-        <a href="contakti.html">Контакты</a>
-        <a href="news.html">Новости</a>
-        <a href="aktciya.html">Акции</a>
-      </div>
-      <div class="footer-meta">
-        STO-KRASNODARA, Краснодар • Телефоны: +7 (918) 410-06-52, +7 (918) 382-01-95 • Запись заранее обязательна.
-      </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <strong>Сайты для СТО</strong>
+      <p>Студия простых сайтов для автосервисов и частных авто-мастеров</p>
+      <a href="mailto:fedorromanovich@freemeal.live">fedorromanovich@freemeal.live</a>
+      <a href="tel:+66831355040">+66 83 135 5040</a>
+      <a href="https://wa.me/66831355040" target="_blank" rel="noopener noreferrer">WhatsApp: +66 83 135 5040</a>
+      <a href="https://t.me/grishin_fedor" target="_blank" rel="noopener noreferrer">Telegram: @grishin_fedor</a>
+      <p>Простые сайты для небольших СТО, мастеров и сервисов по китайским авто</p>
     </div>
   </footer>
 
-  <div class="mobile-cta">
-    <a class="btn btn--accent" href="tel:+79184100652">Позвонить и записаться</a>
-  </div>
+  <script>
+    // Заполните URL, если хотите отправлять форму в API/сервис напрямую
+    const FORM_ENDPOINT = "";
 
-  <script src="assets/js/main.js"></script>
+    // Мобильное меню
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+    });
+
+    // Плавный скролл для якорей + автозакрытие меню
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        if (mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          burger.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Accordion FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      const btn = item.querySelector('.faq-q');
+      const content = item.querySelector('.faq-a');
+
+      btn.addEventListener('click', () => {
+        const active = item.classList.contains('active');
+
+        faqItems.forEach((el) => {
+          el.classList.remove('active');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          el.querySelector('.faq-a').style.maxHeight = null;
+        });
+
+        if (!active) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Форма: валидация + отправка в endpoint (если задан) или fallback в WhatsApp
+    const studioForm = document.getElementById('studioForm');
+    const studioMsg = document.getElementById('studioMsg');
+
+    studioForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!studioForm.checkValidity()) {
+        studioMsg.textContent = 'Проверьте, пожалуйста, обязательные поля формы.';
+        studioForm.reportValidity();
+        return;
+      }
+
+      const formData = new FormData(studioForm);
+      const payload = {
+        name: String(formData.get('name') || '').trim(),
+        phone: String(formData.get('phone') || '').trim(),
+        task: String(formData.get('task') || '').trim()
+      };
+
+      try {
+        if (FORM_ENDPOINT) {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+            throw new Error('endpoint-error');
+          }
+
+          studioMsg.textContent = 'Спасибо! Заявка отправлена. Мы скоро свяжемся с вами.';
+          studioForm.reset();
+          return;
+        }
+
+        const text = `Новая заявка с сайта Сайты для СТО%0AИмя: ${encodeURIComponent(payload.name)}%0AТелефон: ${encodeURIComponent(payload.phone)}%0AЗадача: ${encodeURIComponent(payload.task)}`;
+        const whatsappWindow = window.open(`https://wa.me/66831355040?text=${text}`, '_blank', 'noopener,noreferrer');
+        studioForm.reset();
+        studioMsg.textContent = whatsappWindow
+          ? 'Открыли WhatsApp с вашей заявкой. Проверьте и отправьте сообщение.'
+          : 'Браузер заблокировал новое окно. Напишите в WhatsApp вручную: +66 83 135 5040';
+      } catch (error) {
+        studioMsg.textContent = 'Не удалось отправить заявку автоматически. Напишите в Telegram: @grishin_fedor';
+      }
+    });
+  </script>
 </body>
 </html>
