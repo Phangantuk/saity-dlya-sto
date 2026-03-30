@@ -22,3 +22,13 @@
 
 ## Production URL
 - https://saity-dlya-sto.vercel.app
+
+## Ключевые доработки
+- Обновлены реальные контакты студии (телефон, email, Telegram, WhatsApp).
+- Все CTA и контакты переведены в рабочие ссылки `tel:`, `mailto:`, `wa.me`, `t.me`.
+- Добавлены `favicon`, `canonical`, `og:*` и локальная `og-cover.svg`.
+- Улучшена форма: обязательные поля, валидация, fallback-отправка в WhatsApp.
+
+## Формы
+- По умолчанию форма отправляет заявку через WhatsApp (готовый рабочий fallback).
+- Для прямой отправки в API достаточно заполнить `FORM_ENDPOINT` в `index.html`.
